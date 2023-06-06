@@ -1,0 +1,42 @@
+[package]
+name = "spotify-api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-trait = "*"
+lazy_static = "*"
+log = "*"
+serde = { version = "*", features = ["derive"] }
+strum = "*"
+strum_macros = "*"
+url = "*"
+utils = { path = "../utils" }
+wasm-bindgen = "*"
+
+[dependencies.instant]
+version = "*"
+features = [
+    "wasm-bindgen"
+]
+
+[dependencies.web-sys]
+version = "*"
+default-features = false
+features = [
+    "Location",
+    "Storage",
+    "console",
+]
+
+[dependencies.reqwest]
+version = "*"
+features = [
+    "json",
+]
+
+[dev-dependencies]
+base64 = "*"
+serde_json = "*"
+wasm-bindgen-test = "*"
+wasm-logger = "*"

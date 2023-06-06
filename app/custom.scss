@@ -1,0 +1,60 @@
+@import 'bulma/sass/utilities/initial-variables.sass';
+@import 'bulma/sass/utilities/functions.sass';
+
+$black: #000000;
+$orange: findDarkColor($orange, 26%);
+$yellow: findDarkColor($yellow, 45%);
+$green: findDarkColor($green, 33%);
+$turquoise: findDarkColor($turquoise, 25%);
+$cyan: findDarkColor($cyan, 20%);
+$blue: findDarkColor($blue);
+$purple: findDarkColor($purple);
+$red: findDarkColor($red, 35%);
+
+$primary: #17883e;
+$warning: $orange;
+
+$scheme-main: $black-ter;
+$scheme-invert: $black;
+
+$background: $grey-dark;
+
+$border: $grey-light;
+$border-hover: $grey;
+$border-light: $grey-darker;
+$border-light-hover: $black-ter;
+
+$code: $grey-light;
+$text: $grey-lighter;
+$text-strong: $grey-lightest;
+
+$link-hover: $grey-dark;
+$link-hover-border: $grey;
+
+@import 'bulma/bulma.sass';
+
+@keyframes timeout-progress {
+    from {
+        /* background-image: is only 30% the width; */
+        background-size: calc(100% * 100 / 30) 100%;
+    }
+
+    to {
+        background-size: 0% 100%;
+    }
+}
+
+.timeout-progress {
+    @extend .progress;
+    border-style: solid;
+    border-width: thin;
+
+    &:indeterminate {
+        border-color: $progress-bar-background-color;
+        animation-name: timeout-progress;
+    }
+}
+
+.notification {
+    border-color: $border-light;
+}

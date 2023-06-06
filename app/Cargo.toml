@@ -1,0 +1,37 @@
+[package]
+name = "spotifyrs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+spotify = { path = "../spotify-api", package = "spotify-api" }
+log = "*"
+serde = "*"
+strum = "*"
+strum_macros = "*"
+url = "*"
+utils = { path = "../utils" }
+wasm-logger = "*"
+yew-router = "*"
+
+[dependencies.instant]
+version = "*"
+features = [
+    "wasm-bindgen"
+]
+
+[dependencies.web-sys]
+version = "*"
+features = [
+    "HtmlDialogElement"
+]
+
+[dependencies.yew]
+version = "*"
+features = [
+    "csr"
+]
+
+[dev-dependencies]
+wasm-bindgen-test = "*"
+wasm-logger = "*"

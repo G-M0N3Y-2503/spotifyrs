@@ -1,0 +1,44 @@
+[package]
+name = "utils"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+base64 = "*"
+js-sys = "*"
+log = "*"
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+url = "*"
+wasm-bindgen = "*"
+wasm-bindgen-test = "*"
+wasm-bindgen-futures = "*"
+reqwest = "*"
+
+[dependencies.instant]
+version = "*"
+features = [
+    "wasm-bindgen"
+]
+
+[dependencies.web-sys]
+version = "*"
+default-features = false
+features = [
+    "console",
+    "Crypto",
+    "Storage",
+    "SubtleCrypto",
+    "Window",
+]
+
+[dev-dependencies]
+wasm-bindgen-test = "*"
+wasm-logger = "*"
+
+[dev-dependencies.web-sys]
+version = "*"
+default-features = false
+features = [
+    "Location",
+]
